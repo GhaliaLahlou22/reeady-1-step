@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import clsx from 'clsx'
 const LoanCard = () => {
   const [loanAmount, setLoanAmount] = useState(2000)
   const [interestRates, setInterestRates] = useState(3.5)
@@ -46,9 +46,9 @@ const LoanCard = () => {
   const hasErrors = Object.values(errors).some((error) => error !== '')
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#0f2a20]">
+    <div className="flex items-center justify-center min-h-screen bg-[#0f2a20] font-[Montserrat] ">
       <div className="max-w-md mx-auto p-6 bg-[#285944] rounded-2xl shadow-md space-y-4 text-[#d7c068]">
-        <h2 className="text-xl font-bold text-center">Calcul de mensualité</h2>
+        <h2 className="text-xl font-bold text-center ">Calcul de mensualité</h2>
         <div>
           <label>Montant du prêt (€): </label>
           <input
@@ -100,7 +100,13 @@ const LoanCard = () => {
         </div>
         {!hasErrors && (
           <div>
-            <p className="text-center">Mensualité : {monthlyPayment} €</p>
+            <p
+              className={clsx('text-center font-bold', {
+                'text-red-500': Number(monthlyPayment) > 10000
+              })}
+            >
+              Mensualité : {monthlyPayment} €
+            </p>
           </div>
         )}
       </div>

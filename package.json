@@ -11,11 +11,17 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.1.1",
+    "@hookform/resolvers": "^3.10.0",
     "@tailwindcss/vite": "^4.0.3",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.474.0",
     "prettier": "^3.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^4.0.3"
+    "react-hook-form": "^7.54.2",
+    "tailwindcss": "^4.0.3",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

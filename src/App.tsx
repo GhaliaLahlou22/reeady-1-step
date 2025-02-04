@@ -1,12 +1,14 @@
-import React from 'react'
-import LoanCard from './components/LoanCard/LoanCard'
+import '@fontsource/montserrat'
+import LoanCard from './components/LoanCard'
+import LoanManagement from './components/LoanManagement'
+import LoanForm from './components/LoanForm'
 import './App.css'
 
 function App() {
   return (
     <>
       <div>
-        <LoanCard />
+        <LoanForm />
       </div>
     </>
   )
